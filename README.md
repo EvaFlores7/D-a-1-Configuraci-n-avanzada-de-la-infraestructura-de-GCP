@@ -115,15 +115,22 @@ Puedes revisar la documentación oficial de Google Cloud IAM para comprender có
 En la **Google Cloud Console**, la gestión de accesos se realiza desde la sección **IAM y Administración → IAM**.
 
 1. Haz clic en **Otorgar acceso** para añadir un nuevo miembro (usuario o cuenta de servicio). ![Pantalla de inicio](files/otorgar.png)
-2. Ingresa el correo electrónico del usuario de prueba. 
+2. Ingresa el correo electrónico del usuario de prueba.  ![Pantalla de inicio](files/creacion.png) 
 3. Selecciona un rol con privilegios mínimos, por ejemplo:
    - **Viewer** → acceso de solo lectura a todo el proyecto.
    - **Storage Object Viewer** → acceso de solo lectura a objetos en Cloud Storage.
-     ![Pantalla de inicio](files/us-prueba.png)
 4. Guarda los cambios. El nuevo usuario aparecerá en la lista con los permisos asignados. ![Pantalla de inicio](files/nuevo-usu.png)
 5. En caso de ser necesario, se pueden editar los permisos ![Pantalla de inicio](files/edit.png)
 
 ✅ Con estos pasos, el usuario de prueba tendrá acceso restringido, lo que permite simular un entorno seguro y controlado.
+
+## 🔐 Buenas prácticas de asignación de privilegios
+
+Para garantizar un entorno controlado y seguro en producción, se recomienda aplicar el principio de **privilegios mínimos** al asignar roles y permisos en IAM.  
+Esto significa otorgar únicamente los permisos estrictamente necesarios para cada usuario o cuenta de servicio.
+
+📖 Para más detalles sobre buenas prácticas de seguridad en IAM, consulta la documentación oficial:  
+[Usar IAM de forma segura - Google Cloud](https://docs.cloud.google.com/iam/docs/using-iam-securely?hl=es-419)
 
 
 ## 2. Diseño de Almacenamiento y Automatización ⚙️
