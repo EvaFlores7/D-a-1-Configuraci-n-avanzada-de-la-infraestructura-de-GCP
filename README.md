@@ -51,7 +51,7 @@ _Este repositorio documenta la creación y configuración de un entorno seguro y
 _Creación de cuenta en Google Cloud_
 ![Pantalla de inicio](files/sesion.png)
 ---
-## 1. Creación y configuración del proyecto
+## 🛠️ 1. Creación y configuración del proyecto
 
 
 ### 🔧 Instalación de Google Cloud CLI
@@ -94,9 +94,19 @@ gcloud services enable cloudbuild.googleapis.com
 ```
 ✅ Estos comandos habilitan las APIs necesarias para que tu entorno pueda crear buckets, desplegar funciones, manejar eventos y registrar logs.
 
-## 🔐 2. Configurar roles y permisos mediante IAM,(IAM)
+## 📌 Habilitación de APIs desde la Google Cloud Console
 
-## Diseño de Almacenamiento y Automatización ⚙️
+O bien, empleando la **Google Cloud Console**:
+
+1. En el menú lateral, selecciona **APIs y Servicios**.
+2. En la sección **APIs y Servicios habilitados**, identifica cuáles APIs ya están activas.
+3. Si necesitas agregar una nueva, selecciona nuevamente **APIs y Servicios → Biblioteca** y habilita la API correspondiente.
+
+
+## 🔐 Configurar roles y permisos mediante IAM,(IAM)
+Creación de usuario con privilegios mínimos
+
+## 2. Diseño de Almacenamiento y Automatización ⚙️
 
 _Explica como ejecutar las pruebas automatizadas para este sistema_
 
