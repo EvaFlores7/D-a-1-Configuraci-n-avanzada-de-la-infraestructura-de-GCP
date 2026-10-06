@@ -67,7 +67,7 @@ Esto abrirá un asistente interactivo para:
 - Seleccionar tu cuenta de Google.
 - Elegir el proyecto por defecto.
 
-4. Configurar la región y zona predeterminadas.
+4. Configurar la región y zona predeterminadas. ![Pantalla de inicio](files/region.png)
 5. Verificar instalación con `gcloud --version`.
 6. Autenticarse con `gcloud auth login` si es necesario.
 
@@ -94,7 +94,7 @@ gcloud services enable cloudbuild.googleapis.com
 ```
 ✅ Estos comandos habilitan las APIs necesarias para que tu entorno pueda crear buckets, desplegar funciones, manejar eventos y registrar logs.
 
-## 🔐 2. Configuración de Roles y Permisos (IAM)
+## 🔐 2. Configurar roles y permisos mediante IAM,(IAM)
 
 ## Diseño de Almacenamiento y Automatización ⚙️
 
