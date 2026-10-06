@@ -53,7 +53,7 @@ Además de instalar la consola de Cloud en la computadora, también se puede ini
 5. Selecciona la organización (si aplica) y define la ubicación.
 6. Haz clic en **Crear**. ![Pantalla de inicio](files/nombre.png)
 7. Se mostrara una notificación indicando que se completo la creación del proyecto.  ![Pantalla de inicio](files/notificacion.png)
-8. Una vez creado, podrás habilitar APIs, configurar IAM y gestionar recursos dentro de este proyecto.  ![Pantalla de inicio](files/nselec-proy.png)
+8. Una vez creado, podrás habilitar APIs, configurar IAM y gestionar recursos dentro de este proyecto.  ![Pantalla de inicio](files/selec-proy.png)
 
 📖 Nota: Para crear recursos como buckets o máquinas virtuales será necesario tener la **facturación activada** en el proyecto.  
 
@@ -154,88 +154,3 @@ Para mayor información acerca de las opciones de configuración y selección ut
 
 ---
 
-## Configurar reglas de ciclo de vida
-
-1. Abre el bucket y entra a la pestaña **Ciclo de vida**.
-2. Haz clic en **Agregar una regla**.
-3. Define la **acción**:
-   - Establecer la clase de almacenamiento (Nearline, Coldline o Archive).
-   - Borrar objeto.
-   - Borrar versiones no actuales (requiere control de versiones).
-   - Cancelar cargas multiparte incompletas.
-4. Define las **condiciones**, por ejemplo:
-   - Edad (días desde la creación).
-   - Creado antes de una fecha.
-   - Clase de almacenamiento actual.
-   - Cantidad de versiones más recientes.
-   - Días desde que el objeto pasó a no actual.
-5. Guarda la regla.
-
-### Regla para Archivos
-
-| Regla | Condición | Acción |
-|---|---|---|
-| 1 | Edad ≥ 30 días | Pasar a Nearline |
-| 2 | Edad ≥ 90 días | Pasar a Coldline |
-| 3 | Edad ≥ 365 días | Borrar objeto |
-| 4 | Más de 3 versiones, no actuales | Borrar versión no actual |
-
-> Las reglas pueden tardar hasta 24 horas en aplicarse.
-
-### Política de retención
-
-En la pestaña **Protección → Política de retención** se define un período mínimo durante el cual los objetos no pueden borrarse ni sobrescribirse.
-
-- Una regla de ciclo de vida que borra no eliminará un objeto hasta que termine su período de retención.
-- **Bloquear** la política de retención es **irreversible**. Confirma el período antes de hacerlo.
-
----
-
-## Configurar políticas de acceso (IAM)
-
-1. En el bucket, abre la pestaña **Permisos**.
-2. Haz clic en **Otorgar acceso**.
-3. En **Nuevos principales**, escribe un **grupo** (preferible) o una **cuenta de servicio**.
-4. Selecciona el rol según la necesidad:
-
-| Necesidad | Rol |
-|---|---|
-| Solo lectura | `roles/storage.objectViewer` |
-| Subir objetos sin borrar ni sobrescribir | `roles/storage.objectCreator` |
-| Leer, escribir y borrar objetos | `roles/storage.objectUser` |
-| Control total de objetos | `roles/storage.objectAdmin` |
-| Administrar el bucket y su IAM | `roles/storage.admin` (solo administradores) |
-
-5. Opcional: usa **Agregar condición de IAM** para que el acceso expire en una fecha o aplique solo a un prefijo de objetos.
-6. Guarda los cambios.
-
-### Esquema 
-
-| Principal | Rol | Propósito |
-|---|---|---|
-| `grupo-lectura@empresa.com` | `Storage Object Viewer` | Consulta de datos |
-| `sa-app@proyecto.iam.gserviceaccount.com` | `Storage Object Creator` u `Object User` | Escritura desde la aplicación |
-| `grupo-admin-storage@empresa.com` | `Storage Admin` | Administración (grupo reducido) |
-
----
-
-## Buenas prácticas de seguridad
-
-- Otorga los roles **a nivel de bucket**, no de proyecto (menor alcance posible).
-- Evita los roles básicos (Owner, Editor, Viewer) en producción.
-- Asigna roles a **grupos** en lugar de usuarios individuales.
-- Usa una **cuenta de servicio distinta** por cada aplicación o componente.
-- Evita las **claves de cuenta de servicio**. Si son indispensables, rótalas y no las guardes en el código.
-- Mantén activo **Prevenir acceso público**.
-- Usa **condiciones de IAM** o acceso temporal para permisos que no deben ser permanentes.
-- Revisa periódicamente los **Registros de auditoría de Cloud** para detectar cambios en políticas y accesos.
-
----
-
-## Referencias
-
-- [Usa IAM de forma segura](https://docs.cloud.google.com/iam/docs/using-iam-securely?hl=es-419)
-- [Documentación de Cloud Storage](https://cloud.google.com/storage/docs?hl=es-419)
-
-
----
