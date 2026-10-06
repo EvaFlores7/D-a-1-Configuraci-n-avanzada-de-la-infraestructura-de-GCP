@@ -59,28 +59,22 @@ Este repositorio está diseñado como guía práctica para demostrar competencia
 _Creación de cuenta en Google Cloud_
 ![Pantalla de inicio](files/sesion.png)
 
+### Instalación Google Cloud CLI🔧
 
-```
-Da un ejemplo
-```
+## 🔧 Instalación de Google Cloud CLI
 
-### Instalación 🔧
+Sigue la [documentación oficial de Google Cloud](https://cloud.google.com/sdk/docs/install) para instalar la CLI en tu sistema operativo.
 
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
+### Pasos básicos:
+1. Descargar el instalador según tu plataforma (Windows, Linux, macOS).
+2. Ejecutar el instalador o script de instalación.
+3. Inicializar la CLI con `gcloud init`.
+4. Verificar instalación con `gcloud --version`.
+5. Autenticarse con `gcloud auth login` si es necesario.
 
-_Dí cómo será ese paso_
-
-```
-Da un ejemplo
-```
-
-_Y repite_
-
-```
-hasta finalizar
-```
-
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
+![Pantalla de inicio](files/.png)
+![Pantalla de inicio](files/.png)
+![Pantalla de inicio](files/.png)
 
 ## Ejecutando las pruebas ⚙️
 
