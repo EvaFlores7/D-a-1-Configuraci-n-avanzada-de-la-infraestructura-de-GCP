@@ -138,8 +138,8 @@ Esto significa otorgar únicamente los permisos estrictamente necesarios para ca
 
 ##  Crear el bucket en Cloud Storage
 
-1. Ingresa a [console.cloud.google.com](https://console.cloud.google.com) y selecciona el proyecto.
-2. Ve a **Cloud Storage → Buckets → Crear**.
+1. Ingresa a [console.cloud.google.com](https://console.cloud.google.com) y selecciona el proyecto. ![Pantalla de inicio](files/buscar-bucket.png)
+2. Ve a **Cloud Storage → Buckets → Crear**.  ![Pantalla de inicio](files/crear-bucket.png)
 3. Configura los siguientes parámetros:
 
 | Paso | Configuración recomendada |
@@ -153,6 +153,8 @@ Esto significa otorgar únicamente los permisos estrictamente necesarios para ca
 4. Haz clic en **Crear**.
 
 > **Nota:** con el control de acceso uniforme, todo el acceso se gestiona únicamente con IAM, sin ACL por objeto.
+
+- [Creación del bucket: opciones y justificación](files/creacion-bucket.md)
 
 ---
 
