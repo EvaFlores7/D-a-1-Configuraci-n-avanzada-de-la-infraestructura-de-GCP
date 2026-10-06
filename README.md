@@ -150,11 +150,20 @@ Esto significa otorgar únicamente los permisos estrictamente necesarios para ca
 | **Control de acceso** | Activar **Prevenir acceso público** y elegir **Uniforme** |
 | **Protección de datos** | Activar **control de versiones**, definir **política de retención** y revisar *soft delete* |
 
+![Pantalla de inicio](files/config.png)
+
 4. Haz clic en **Crear**.
 
 > **Nota:** con el control de acceso uniforme, todo el acceso se gestiona únicamente con IAM, sin ACL por objeto.
 
+### 📂 Información adicional sobre configuración
+
+Para mayor información acerca de las opciones de configuración y selección utilizadas, se creó un archivo complementario:
+
 - [Creación del bucket: opciones y justificación](files/creacion-bucket.md)
+
+📖 Además, se consultó la documentación oficial de Google Cloud Storage para la creación de buckets:  
+[Crear buckets - Google Cloud](https://docs.cloud.google.com/storage/docs/creating-buckets?hl=es-419)
 
 ---
 
