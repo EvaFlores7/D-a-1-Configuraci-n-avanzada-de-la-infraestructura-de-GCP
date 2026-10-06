@@ -57,6 +57,8 @@ Este repositorio está diseñado como guía práctica para demostrar competencia
 ### Pre-requisitos 📋
 
 _Creación de cuenta en Google Cloud_
+![Pantalla de inicio](files/sesion.png)
+
 
 ```
 Da un ejemplo
