@@ -100,11 +100,29 @@ O bien, empleando la **Google Cloud Console**:
 
 1. En el menú lateral, selecciona **APIs y Servicios**. ![Pantalla de inicio](files/habilitar.png)
 2. En la sección **APIs y Servicios habilitados**, identifica cuáles APIs ya están activas. ![Pantalla de inicio](files/habilitados.png)
-3. Si necesitas agregar una nueva, selecciona nuevamente **APIs y Servicios → Biblioteca** y habilita la API correspondiente. Cuando se habilita una nueva API desde la **Google Cloud Console**, el cambio se refleja inmediatamente en la sección **APIs y Servicios habilitados**. Las APIs activas aparecen destacadas en la lista con un estado diferente al de las que aún no están habilitadas, lo que permite identificar fácilmente cuáles ya están disponibles en el proyecto.![Pantalla de inicio](files/verificacion.png)
+3. Si necesitas agregar una nueva, selecciona nuevamente **APIs y Servicios → Biblioteca** y habilita la API correspondiente. Cuando se habilita una nueva API desde la **Google Cloud Console**, el cambio se refleja inmediatamente en la sección **APIs y Servicios habilitados**. Las APIs activas aparecen destacadas en la lista con un estado diferente al de las que aún no están habilitadas, lo que permite identificar fácilmente cuáles ya están disponibles en el proyecto.
+![Pantalla de inicio](files/verificacion.png)
 
+## 🔐 Configuración de Roles y Permisos (IAM)
 
-## 🔐 Configurar roles y permisos mediante IAM,(IAM)
-Creación de usuario con privilegios mínimos
+Para simular un entorno de producción controlado, se recomienda crear un **usuario de prueba con privilegios mínimos** utilizando **Identity and Access Management (IAM)**.
+
+### 📖 Referencia
+Puedes revisar la documentación oficial de Google Cloud IAM para comprender cómo funciona la gestión de identidades y accesos:  
+[Documentación IAM - Google Cloud](https://docs.cloud.google.com/iam/docs/overview?hl=es-419)
+
+### 🛠️ Pasos en la Google Cloud Console
+En la **Google Cloud Console**, la gestión de accesos se realiza desde la sección **IAM y Administración → IAM**.
+
+1. Haz clic en **Otorgar acceso** para añadir un nuevo miembro (usuario o cuenta de servicio).
+2. Ingresa el correo electrónico del usuario de prueba.
+3. Selecciona un rol con privilegios mínimos, por ejemplo:
+   - **Viewer** → acceso de solo lectura a todo el proyecto.
+   - **Storage Object Viewer** → acceso de solo lectura a objetos en Cloud Storage.
+4. Guarda los cambios. El nuevo usuario aparecerá en la lista con los permisos asignados.
+
+✅ Con estos pasos, el usuario de prueba tendrá acceso restringido, lo que permite simular un entorno seguro y controlado.
+
 
 ## 2. Diseño de Almacenamiento y Automatización ⚙️
 
