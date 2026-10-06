@@ -1,22 +1,5 @@
 # Bucket de Cloud Storage con ciclo de vida y accesos refinados
 
-Guía para crear y configurar un bucket de Cloud Storage en un entorno de producción controlado desde la **Google Cloud Console**, aplicando el principio de **privilegio mínimo**.
-
-## Objetivo
-
-- Crear un bucket seguro (sin acceso público y con control de acceso uniforme).
-- Definir reglas de **ciclo de vida** para gestionar la retención y eliminación de archivos.
-- Configurar **políticas de acceso refinadas** con roles IAM específicos de lectura y escritura.
-
-## Requisitos previos
-
-- Un proyecto de Google Cloud con facturación activa.
-- La API de Cloud Storage habilitada.
-- Permisos para crear buckets (por ejemplo `roles/storage.admin` en el proyecto) y para administrar IAM del bucket.
-- Grupos de Google o cuentas de servicio definidos para asignar los roles.
-
----
-
 ## 1. Crear el bucket
 
 Ruta en la consola: **Cloud Storage → Buckets → Crear**.
