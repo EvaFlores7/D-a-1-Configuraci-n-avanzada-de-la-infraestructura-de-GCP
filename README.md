@@ -9,35 +9,6 @@ _Este repositorio documenta la creación y configuración de un entorno seguro y
 
 ---
 
-## 📂 Alcance del Proyecto
-
-### 1. Creación y Configuración del Proyecto
-- Configuración inicial de un proyecto en GCP.  
-- Habilitación de APIs clave:  
-  - Cloud Storage  
-  - Cloud Functions  
-  - Cloud Pub/Sub  
-  - Cloud Logging  
-  - (Opcional) Cloud Build  
-- Implementación de **IAM** con roles y permisos mínimos, incluyendo un usuario de prueba para simular un entorno controlado de producción.  
-
-### 2. Diseño de Almacenamiento y Automatización
-- Creación de un **bucket en Cloud Storage** con:  
-  - Reglas de ciclo de vida para retención y eliminación de archivos.  
-  - Políticas de acceso refinadas para lectura/escritura.  
-- Desarrollo de una **Cloud Function (Python/Node.js)** que se activa al subir un archivo:  
-  - Extracción de metadatos (nombre, tamaño, tipo).  
-  - Registro de eventos en **Cloud Logging**.  
-  - Manejo robusto de errores y logging detallado para depuración.  
-
-### 3. Pruebas y Documentación
-- Implementación de pruebas unitarias básicas para validar:  
-  - Flujo exitoso de la función.  
-  - Manejo de errores en escenarios controlados.  
-- Documentación del proceso y resultados para asegurar reproducibilidad.  
-
----
-
 ## 🛠️ Tecnologías Utilizadas
 - **Google Cloud Platform (GCP)**  
 - **Cloud Storage, Cloud Functions, Pub/Sub, Logging, IAM**  
@@ -53,8 +24,7 @@ _Creación de cuenta en Google Cloud_
 ---
 ## 🛠️ 1. Creación y configuración del proyecto
 
-
-### 🔧 Instalación de Google Cloud CLI
+### 🚀 Opción 1: Instalación de Google Cloud CLI
 
 Sigue la [documentación oficial de Google Cloud](https://cloud.google.com/sdk/docs/install) para instalar la CLI en tu sistema operativo.
 
@@ -70,6 +40,23 @@ Esto abrirá un asistente interactivo para:
 4. Configurar la región y zona predeterminadas. ![Pantalla de inicio](files/region.png)
 5. Verificar instalación con `gcloud --version`.
 6. Autenticarse con `gcloud auth login` si es necesario.
+
+## 🚀 Opción 2: Crear un nuevo proyecto en Google Cloud Platform
+
+Además de instalar la consola de Cloud en la computadora, también se puede iniciar la simulación creando un nuevo proyecto directamente en la **Google Cloud Console**:
+
+### 🛠️ Pasos
+1. Ingresa a [Google Cloud Console](https://console.cloud.google.com). ![Pantalla de inicio](files/panel.png)
+2. En la parte superior izquierda, haz clic en el **selector de proyectos**.
+3. Pulsa **“Proyecto nuevo”**.![Pantalla de inicio](files/proyecto-nuevo.png)
+4. Asigna un nombre único (ejemplo: `proyectodia1 6952`). 
+5. Selecciona la organización (si aplica) y define la ubicación.
+6. Haz clic en **Crear**. ![Pantalla de inicio](files/nombre.png)
+7. Se mostrara una notificación indicando que se completo la creación del proyecto.  ![Pantalla de inicio](files/notificacion.png)
+8. Una vez creado, podrás habilitar APIs, configurar IAM y gestionar recursos dentro de este proyecto.  ![Pantalla de inicio](files/nselec-proy.png)
+
+📖 Nota: Para crear recursos como buckets o máquinas virtuales será necesario tener la **facturación activada** en el proyecto.  
+
 
 ## ⚙️ Habilitación de APIs en GCP
 
