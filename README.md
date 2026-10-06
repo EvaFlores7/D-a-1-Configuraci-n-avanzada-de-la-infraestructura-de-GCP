@@ -98,9 +98,9 @@ gcloud services enable cloudbuild.googleapis.com
 
 O bien, empleando la **Google Cloud Console**:
 
-1. En el menú lateral, selecciona **APIs y Servicios**.
-2. En la sección **APIs y Servicios habilitados**, identifica cuáles APIs ya están activas.
-3. Si necesitas agregar una nueva, selecciona nuevamente **APIs y Servicios → Biblioteca** y habilita la API correspondiente.
+1. En el menú lateral, selecciona **APIs y Servicios**. ![Pantalla de inicio](files/habilitar.png)
+2. En la sección **APIs y Servicios habilitados**, identifica cuáles APIs ya están activas. ![Pantalla de inicio](files/habilitados.png)
+3. Si necesitas agregar una nueva, selecciona nuevamente **APIs y Servicios → Biblioteca** y habilita la API correspondiente. Cuando se habilita una nueva API desde la **Google Cloud Console**, el cambio se refleja inmediatamente en la sección **APIs y Servicios habilitados**. Las APIs activas aparecen destacadas en la lista con un estado diferente al de las que aún no están habilitadas, lo que permite identificar fácilmente cuáles ya están disponibles en el proyecto.![Pantalla de inicio](files/verificacion.png)
 
 
 ## 🔐 Configurar roles y permisos mediante IAM,(IAM)
