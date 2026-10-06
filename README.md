@@ -73,7 +73,7 @@ Sigue la [documentación oficial de Google Cloud](https://cloud.google.com/sdk/d
 5. Autenticarse con `gcloud auth login` si es necesario.
 
 ![Pantalla de inicio](files/instalacion.png)
-![Pantalla de inicio](files/ins1.png)
+
 ![Pantalla de inicio](files/ins2.png)
 
 ## Ejecutando las pruebas ⚙️
